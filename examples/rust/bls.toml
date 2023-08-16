@@ -1,0 +1,15 @@
+name = "example-stdin-vars"
+version = "1.0.0"
+
+[deployment]
+nodes = 1
+
+[build]
+dir = "target/wasm32-wasi/debug"
+entry = "example-stdin-vars.wasm"
+command = "cargo build --target wasm32-wasi"
+
+[build_release]
+dir = "target/wasm32-wasi/release"
+entry = "example-stdin-vars.wasm"
+command = "cargo build --target wasm32-wasi --release"
