@@ -1,0 +1,16 @@
+name = "example-stdin-vars"
+version = "1.0.0"
+content_type="json"
+
+[deployment]
+nodes = 1
+
+[build]
+dir = "build"
+entry = "example-stdin-vars_debug.wasm"
+command = "npm run build:debug"
+
+[build_release]
+dir = "build"
+entry = "example-stdin-vars.wasm"
+command = "npm run build:release"
